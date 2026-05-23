@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Ehra 💖</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:Arial,sans-serif;
+height:100vh;
+overflow:hidden;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+background:linear-gradient(135deg,#ffd9e8,#f5d6ff);
+animation:bgAnimate 15s infinite alternate;
+position:relative;
+}
+
+@keyframes bgAnimate{
+0%{
+background:linear-gradient(135deg,#ffd9e8,#f5d6ff);
+}
+50%{
+background:linear-gradient(135deg,#ffe4e1,#ffb6c1);
+}
+100%{
+background:linear-gradient(135deg,#ffccd5,#e0c3fc);
+}
+}
+
+.cloud{
+position:absolute;
+background:white;
+width:200px;
+height:60px;
+border-radius:100px;
+opacity:.5;
+}
+
+.cloud:before{
+content:"";
+position:absolute;
+width:80px;
+height:80px;
+background:white;
+border-radius:50%;
+top:-30px;
+left:30px;
+}
+
+.cloud1{
+top:80px;
+left:50px;
+}
+
+.cloud2{
+bottom:100px;
+right:50px;
+}
+
+.container{
+z-index:2;
+padding:30px;
+}
+
+.small{
+font-size:30px;
+color:#555;
+text-shadow:1px 1px 4px white;
+}
+
+.name{
+font-size:100px;
+font-weight:bold;
+color:#ff69b4;
+text-shadow:
+0 0 20px white,
+0 0 30px #ffb6c1;
+}
+
+.text{
+margin-top:15px;
+font-size:22px;
+color:#444;
+}
+
+button{
+
+margin-top:40px;
+
+padding:20px 50px;
+
+border:none;
+
+border-radius:50px;
+
+font-size:25px;
+
+cursor:pointer;
+
+background:
+linear-gradient(
+to right,
+#ff79b0,
+#ff9bd0
+);
+
+color:white;
+
+box-shadow:
+0 8px 25px
+rgba(0,0,0,.2);
+
+transition:.4s;
+
+}
+
+button:hover{
+
+transform:
+scale(1.1);
+
+}
+
+#surprise{
+
+display:none;
+
+animation:
+fade 2s;
+
+}
+
+.love{
+
+font-size:70px;
+
+font-weight:bold;
+
+color:#ff4d88;
+
+text-shadow:
+0 0 20px white;
+
+}
+
+.msg{
+
+font-size:28px;
+
+margin-top:20px;
+
+color:#555;
+
+}
+
+.flower{
+
+font-size:120px;
+
+margin-top:20px;
+
+animation:
+bounce 2s infinite;
+
+}
+
+@keyframes bounce{
+
+50%{
+
+transform:
+translateY(-15px);
+
+}
+
+}
+
+@keyframes fade{
+
+from{
+
+opacity:0;
+
+transform:
+scale(.5);
+
+}
+
+to{
+
+opacity:1;
+
+transform:
+scale(1);
+
+}
+
+}
+
+.heart{
+
+position:absolute;
+
+font-size:30px;
+
+animation:
+float 6s linear infinite;
+
+}
+
+@keyframes float{
+
+0%{
+
+transform:
+translateY(100vh);
+
+opacity:1;
+
+}
+
+100%{
+
+transform:
+translateY(-100px);
+
+opacity:0;
+
+}
+
+}
+
+.star{
+
+position:absolute;
+
+font-size:20px;
+
+animation:
+twinkle 2s infinite alternate;
+
+}
+
+@keyframes twinkle{
+
+0%{
+opacity:.2;
+}
+
+100%{
+opacity:1;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="cloud cloud1"></div>
+<div class="cloud cloud2"></div>
+
+<div class="container">
+
+<div class="small">
+SEHRA FOR LYF 💗
+</div>
+
+<div class="name">
+ehramyr
+</div>
+
+<div class="text">
+
+</div>
+
+<button onclick="showLove()">
+open mo to beb 💌
+</button>
+
+<div id="surprise">
+
+<div class="love">
+I LOVE YOU BEB 💗
+</div>
+
+<div class="msg">
+missuuu<br>
+</div>
+
+<div class="flower">
+💐🌹🌸🌷
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+function showLove(){
+
+document.querySelector(".small")
+.style.display="none";
+
+document.querySelector(".name")
+.style.display="none";
+
+document.querySelector(".text")
+.style.display="none";
+
+document.querySelector("button")
+.style.display="none";
+
+document.getElementById("surprise")
+.style.display="block";
+
+for(let i=0;i<40;i++){
+
+let h=
+document.createElement("div");
+
+h.innerHTML="💖";
+
+h.classList.add("heart");
+
+h.style.left=
+Math.random()*100+"vw";
+
+h.style.animationDuration=
+(Math.random()*4+2)+"s";
+
+document.body.appendChild(h);
+
+}
+
+for(let i=0;i<30;i++){
+
+let s=
+document.createElement("div");
+
+s.innerHTML="✨";
+
+s.classList.add("star");
+
+s.style.left=
+Math.random()*100+"vw";
+
+s.style.top=
+Math.random()*100+"vh";
+
+s.style.animationDuration=
+(Math.random()*3+1)+"s";
+
+document.body.appendChild(s);
+
+}
+
+}
+
+</script>
+
+</body>
+</html>
